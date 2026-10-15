@@ -1,0 +1,57 @@
+@import "../styles/globals.css";
+
+@layer base {
+  :root {
+    @apply font-sans;
+  }
+
+  body {
+    @apply m-0 bg-background text-foreground;
+    min-height: 100vh;
+  }
+}
+
+/* Custom scrollbar for admin panel */
+.overflow-y-auto::-webkit-scrollbar {
+  width: 6px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Ramp brand colors */
+.ramp-yellow {
+  background-color: #D4E94B;
+}
+
+.ramp-yellow-hover:hover {
+  background-color: #c5da3c;
+}
+
+.ramp-dark {
+  background-color: #1a1a2e;
+}
+
+/* Input focus states matching Ramp style */
+input:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(212, 233, 75, 0.3);
+}
+
+/* Smooth transitions */
+* {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
